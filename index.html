@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ram Bhole | Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Ram Bhole</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-section d-flex align-items-center three-bg">
+        <canvas id="home-bg"></canvas>
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">
+                Hi, I'm <span class="text-primary">Ram Bhole</span>
+            </h1>
+
+            <p class="hero-lead"></p>
+
+            <p class="hero-subtitle">
+                Java Full Stack Developer | Spring Boot • REST APIs • PostgreSQL
+            </p>
+
+            <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+
+                <a href="resume.pdf" download class="btn btn-outline-primary btn-lg">
+                    <i class="fas fa-download me-2"></i>Download Resume
+                </a>
+
+                <a href="#contact" class="btn btn-outline-primary btn-lg">Contact Me</a>
+            </div>
+
+
+            <p class="text-success mt-4 fw-semibold">
+                ✔ Open to Internships & Entry-Level Roles
+            </p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="three-bg">
+        <canvas id="about-bg"></canvas>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="section-title">About Me</h2>
+                    <p>
+                        Java Full Stack Developer with hands-on experience in Java, JDBC,
+                        Spring Boot, REST APIs, and PostgreSQL.
+                    </p>
+                    <p>
+                        I enjoy building scalable backend systems, clean user interfaces,
+                        and learning through real-world projects.
+                    </p>
+                    <p class="mt-3 fw-semibold text-primary">
+                        Currently learning: Spring Security • REST Best Practices • System Design
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <div class="profile-wrapper">
+                        <img src="./profile.jpeg" alt="Ram Bhole" id="profile" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="text-center">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-6 col-md-3">
+                    <h2 class="stat-number" data-target="3">0</h2>
+                    <p class="text-muted">Projects Built</p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h2 class="stat-number" data-target="10">0</h2>
+                    <p class="text-muted">Technologies Used</p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h2 class="stat-number" data-target="1">0</h2>
+                    <p class="text-muted">Freelance Client</p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h2 class="stat-number" data-target="2">0</h2>
+                    <p class="text-muted">Stacks (Java + Web)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="three-bg">
+        <canvas id="skills-bg"></canvas>
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skill-filters text-center mt-4 mb-5">
+                    <button class="filter-btn active-filter" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                </div>
+
+                <p class="text-muted">Technologies and tools I work with</p>
+            </div>
+
+            <div class="row">
+
+                <!-- Core Java -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card p-4 h-100 text-center" data-category="backend">
+                        <i class="fab fa-java fa-3x text-warning mb-3"></i>
+                        <h5>Core Java & OOP</h5>
+                        <p>
+                            Core Java, Object-Oriented Programming, exception handling,
+                            collections, basic multithreading
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Spring Boot -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card p-4 h-100 text-center" data-category="backend">
+                        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                        <h5>Spring Boot</h5>
+                        <p>
+                            Spring Boot fundamentals, dependency injection,
+                            controllers, application configuration
+                        </p>
+                    </div>
+                </div>
+
+                <!-- REST APIs -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card p-4 h-100 text-center" data-category="backend">
+                        <i class="fas fa-network-wired fa-3x text-primary mb-3"></i>
+                        <h5>REST APIs</h5>
+                        <p>
+                            RESTful services, CRUD operations,
+                            HTTP methods, JSON, basic API design
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Database & ORM -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card p-4 h-100 text-center" data-category="backend">
+                        <i class="fas fa-database fa-3x text-info mb-3"></i>
+                        <h5>Databases & ORM</h5>
+                        <p>
+                            PostgreSQL, MySQL, SQL queries,
+                            Hibernate, JPA, relational data modeling
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card p-4 h-100 text-center" data-category="frontend">
+                        <i class="fab fa-react fa-3x text-primary mb-3"></i>
+                        <h5>Frontend</h5>
+                        <p>
+                            HTML, CSS, JavaScript (ES6),
+                            React (basics), Bootstrap, responsive design
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tools & IDEs -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card p-4 h-100 text-center" data-category="tools">
+                        <i class="fas fa-tools fa-3x text-light mb-3"></i>
+                        <h5>Tools & IDEs</h5>
+                        <p>
+                            Git, GitHub, VS Code,
+                            Eclipse IDE, IntelliJ IDEA,
+                            Postman, Netlify
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="three-bg">
+        <canvas id="projects-bg"></canvas>
+
+        <div class="container position-relative">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Projects</h2>
+                <p class="text-muted">Some of my academic and real-world projects</p>
+            </div>
+
+            <div class="row">
+
+                <!-- Engiplex Solutions -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card h-100">
+                        <div class="project-image text-center">
+                            <i class="fas fa-briefcase fa-4x text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <h5>Engiplex Solutions (Freelance)</h5>
+                            <p>
+                                Designed, developed, and deployed the official company website for
+                                Engiplex Solutions as a freelance project.
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge bg-primary me-1">Freelance</span>
+                                <span class="badge bg-success me-1">Client Work</span>
+                                <span class="badge bg-info text-dark">Deployment</span>
+                            </div>
+
+                            <p class="text-muted small">
+                                HTML • CSS • Bootstrap • JavaScript • jQuery • PHP • Google Sheets
+                            </p>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://engiplex.in/" target="_blank" class="btn btn-primary btn-sm">
+                                    Visit Website
+                                </a>
+                                <a href="https://github.com/engiplexservices-star/Engiplex" target="_blank"
+                                    class="btn btn-outline-primary btn-sm">
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizon Hub -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card h-100">
+                        <div class="project-image text-center">
+                            <i class="fas fa-cloud-sun fa-4x text-info"></i>
+                        </div>
+                        <div class="p-4">
+                            <h5>Horizon Hub – Weather Forecast App</h5>
+                            <p>
+                                Responsive weather forecasting web app displaying real-time and
+                                multi-day weather data using public APIs.
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge bg-info text-dark me-1">API Based</span>
+                                <span class="badge bg-primary me-1">JavaScript</span>
+                                <span class="badge bg-success">Responsive</span>
+                            </div>
+
+                            <p class="text-muted small">
+                                HTML • CSS • JavaScript (ES6+) • Fetch API • OpenWeatherMap API
+                            </p>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://horhub.netlify.app/" target="_blank" class="btn btn-primary btn-sm">
+                                    Visit Website
+                                </a>
+                                <a href="https://github.com/RamBhole/Horizon-Hub" target="_blank"
+                                    class="btn btn-outline-primary btn-sm">
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banking Management System -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card h-100">
+                        <div class="project-image text-center">
+                            <i class="fas fa-university fa-4x text-success"></i>
+                        </div>
+                        <div class="p-4">
+                            <h5>Banking Management System</h5>
+                            <p>
+                                Console-based banking application to manage customer accounts,
+                                transactions, and balance inquiries.
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge bg-primary me-1">Java</span>
+                                <span class="badge bg-info text-dark me-1">JDBC</span>
+                                <span class="badge bg-success me-1">PostgreSQL</span>
+                                <span class="badge bg-secondary">OOP</span>
+                            </div>
+
+                            <p class="text-muted small">
+                                Java • JDBC • PostgreSQL • OOP
+                            </p>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://github.com/RamBhole/Banking-System-JAVA-JDBC-PostgreSQL"
+                                    target="_blank" class="btn btn-outline-primary btn-sm">
+                                    View on GitHub
+                                </a>
+                                <span class="badge bg-secondary align-self-center">
+                                    Console Application
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="three-bg">
+        <canvas id="education-bg"></canvas>
+
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Education</h2>
+                <p class="text-muted">My academic background</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item skill-card p-4 mb-5">
+                    <h5>B.E. (Electronics & Telecommunication)</h5>
+                    <p class="mb-1">Shri Sant Gajanan Maharashtra College of Engineering, Shegaon</p>
+                    <p class="text-muted small">Dec 2021 – May 2025</p>
+                    <p class="fw-semibold">CGPA: 6.95</p>
+                </div>
+
+                <div class="timeline-item skill-card p-4 mb-5">
+                    <h5>HSC</h5>
+                    <p class="mb-1">Jagruti Junior College, Akola</p>
+                    <p class="text-muted small">Jun 2020 – May 2021</p>
+                    <p class="fw-semibold">Percentage: 91.33%</p>
+                </div>
+
+                <div class="timeline-item skill-card p-4">
+                    <h5>SSC</h5>
+                    <p class="mb-1">Bal Shivaji High School, Akola</p>
+                    <p class="text-muted small">Jul 2018 – May 2019</p>
+                    <p class="fw-semibold">Percentage: 85.40%</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="three-bg">
+        <canvas id="contact-bg"></canvas>
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="text-muted">Let’s work together</p>
+            </div>
+
+            <form name="contact" method="POST" data-netlify="true" class="col-lg-8 mx-auto">
+                <input type="hidden" name="form-name" value="contact">
+                <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+                <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+                <input type="text" name="subject" class="form-control mb-3" placeholder="Subject" required>
+                <textarea name="message" class="form-control mb-4" rows="5" placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Ram Bhole. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="three-bg.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content project-modal">
+
+                <div class="modal-header border-0">
+                    <h4 class="modal-title" id="modalTitle"></h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div id="modalImages" class="modal-images mb-4"></div>
+
+                    <p id="modalDesc" class="mb-3 text-muted"></p>
+
+                    <div id="modalTech" class="mb-3"></div>
+
+                    <div id="modalHighlights" class="mb-3"></div>
+
+                    <div class="d-flex gap-3 mt-4">
+                        <a id="modalLive" target="_blank" class="btn btn-primary">Visit Website</a>
+                        <a id="modalGit" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imgLightbox" class="img-lightbox">
+        <span id="lightboxClose">&times;</span>
+        <img id="lightboxImg" src="">
+    </div>
+
+
+</body>
+
+</html>

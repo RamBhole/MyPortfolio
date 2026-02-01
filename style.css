@@ -1,0 +1,456 @@
+:root {
+    --bg-main: #0b1120;
+    --bg-card: #111827;
+    --primary: #3b82f6;
+    --success: #22c55e;
+    --text-main: #e5e7eb;
+    --text-muted: #cbd5f5;
+    --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+section {
+    padding: 90px 0;
+    border-top: 1px solid var(--border-soft);
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.navbar {
+    background: rgba(11, 17, 32, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero-section {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+}
+
+.hero-lead {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.hero-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+/* ---------------- SECTION TITLES (CENTER GROW) ---------------- */
+
+.section-title {
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    height: 2px;
+    width: 0%;
+    background: var(--primary);
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+section:hover .section-title::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.text-muted {
+    color: var(--text-muted) !important;
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+/* ---------------- PROFILE ---------------- */
+
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 18px;
+}
+
+.profile-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 70%);
+    opacity: 0;
+    filter: blur(18px);
+    transition: opacity 0.4s ease;
+    border-radius: 22px;
+    z-index: 0;
+}
+
+.profile-wrapper:hover::before {
+    opacity: 1;
+}
+
+#profile {
+    position: relative;
+    z-index: 1;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-wrapper:hover #profile {
+    transform: scale(1.04);
+    box-shadow: 0 25px 60px rgba(59, 130, 246, 0.35);
+}
+
+/* ---------------- SKILL CARD ---------------- */
+
+.skill-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-soft);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+/* ---------------- PROJECT CARD ---------------- */
+
+.project-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-soft);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow:
+        0 0 0 1px rgba(59, 130, 246, 0.15),
+        0 20px 60px rgba(59, 130, 246, 0.25);
+}
+
+.project-image {
+    padding: 60px;
+    background: linear-gradient(135deg, #1e293b, #020617);
+}
+
+/* ---------------- FORMS ---------------- */
+
+.form-control {
+    background: #020617;
+    border: 1px solid var(--border-soft);
+    color: var(--text-main);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: none;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* ---------------- THREE.JS ---------------- */
+
+.three-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.three-bg canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.three-bg .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------------- SCROLL REVEAL ---------------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------------- TILT + LIFT ---------------- */
+
+.tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.tilt:hover {
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(59, 130, 246, 0.25);
+}
+
+/* ---------------- EDUCATION TIMELINE ---------------- */
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 48%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 52%;
+}
+
+/* ---------------- MODAL ---------------- */
+
+.project-modal {
+    background: rgba(17, 24, 39, 0.95);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    backdrop-filter: blur(18px);
+    border-radius: 18px;
+}
+
+/* ---------------- NAVBAR UNDERLINE ---------------- */
+
+.navbar .nav-link {
+    position: relative;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== Icon Glow Micro-interaction (restored) ===== */
+
+.skill-card i,
+.project-image i {
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.skill-card:hover i,
+.project-card:hover .project-image i {
+    transform: translateY(-6px) scale(1.12);
+    filter: drop-shadow(0 0 14px rgba(59, 130, 246, 0.85));
+}
+
+.btn i {
+    vertical-align: middle;
+}
+
+/* ===== Modal Project Images ===== */
+
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.modal-images img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.modal-images img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Image Lightbox ===== */
+
+.img-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.img-lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+}
+
+#lightboxClose {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== Active Navbar Link ===== */
+
+.nav-link.active-nav {
+  color: var(--primary) !important;
+  position: relative;
+}
+
+.nav-link.active-nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+}
+
+/* ===== Stats Strip ===== */
+
+#stats {
+  padding: 70px 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ===== Skill Filters ===== */
+
+.skill-filters .filter-btn {
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+  padding: 6px 16px;
+  margin: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-filters .filter-btn:hover,
+.skill-filters .active-filter {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ===== Fix Contact Form White Focus Issue ===== */
+
+.form-control:focus {
+    background: #020617 !important;   /* same as your dark input bg */
+    color: var(--text-main) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.25) !important;
+}
+
+textarea.form-control:focus {
+    background: #020617 !important;
+}
+
+/* ===== Active Navbar Link ===== */
+
+.nav-link.active-nav {
+  color: var(--primary) !important;
+  position: relative;
+}
+
+.nav-link.active-nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+}
+
