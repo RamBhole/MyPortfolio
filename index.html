@@ -398,14 +398,17 @@
                 <p class="text-muted">Let’s work together</p>
             </div>
 
-            <form name="contact" method="POST" data-netlify="true" class="col-lg-8 mx-auto">
-                <input type="hidden" name="form-name" value="contact">
+            <form name="contact" method="POST" data-netlify="true" netlify>
+                <input type="hidden" name="form-name" value="contact" />
+
                 <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
                 <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
                 <input type="text" name="subject" class="form-control mb-3" placeholder="Subject" required>
                 <textarea name="message" class="form-control mb-4" rows="5" placeholder="Message" required></textarea>
+
                 <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
             </form>
+
         </div>
     </section>
 
